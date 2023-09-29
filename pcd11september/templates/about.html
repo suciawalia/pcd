@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+
+html { overflow-x: hidden; }
+
+body{
+    background-image: url('static/img/pcd.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Times New Roman', Times, serif;
+}
+.custom-background {        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tm-container-fluid {
+    width: 100%;
+    max-width: 970px;
+    box-sizing: border-box;
+    margin: 160px auto;
+    padding: 60px 15px;
+}
+
+.tm-flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tm-about,
+.tm-contact {
+    display: flex;
+}
+.tm-about > div { flex: 1 1; }
+.tm-p-50 { padding: 50px; }
+.tm-mb-0 { margin-bottom: 0; font-size: 23px;}
+.tm-mb-30 { margin-bottom: 30px }
+.tm-mb-40 { margin-bottom: 30px; margin-top: 30px;}
+.tm-mb-80 { margin-bottom: 80px; }
+.tm-bgcolor-2 { background-color: #9690c8; }
+.tm-border-rounded { border-radius: 15px; }
+</style>
+</head>
+<body>
+    <div class="custom-background">
+        <div class="tm-container-fluid">
+            <section class="tm-about tm-mb-80 tm-p-50 tm-bgcolor-2 tm-border-rounded">
+                <div class="tm-about-header tm-flex-center">
+                    <i class="fas fa-users fa-2x"></i>
+                    <img src="static/img/aku.jpeg" class="bd-placeholder-img rounded-circle" width="250" height="250">
+                </div>
+                <div class="tm-about-text">
+                    <h2 class="tm-mb-40" style="color: #281d3d;">ABOUT ME</h2>
+                    <p class="tm-mb-0">My name is Suci Awalia Gardara, My NIM is 211524027 and I'm in class 3A. This is an assignment from the Digital Image Processing practice course.</p>
+                    <h2 class="tm-mb-40" style="color: #281d3d;">Contact Information</h2>
+                    <p class="tm-mb-0">Email: suci.awalia.tif421@polban.ac.id</p>
+                    <p class="tm-mb-0">Phone: 085797451775</p>
+                    <p class="tm-mb-0">Address: Jl.Kampus Polban</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

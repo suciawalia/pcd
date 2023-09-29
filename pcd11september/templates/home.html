@@ -1,0 +1,63 @@
+{% extends "layout.html" %} 
+{% block body %}
+<style>
+    body{
+        background-image: url('static/img/pcd.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: 'Times New Roman', Times, serif;
+       
+    }
+    .custom-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .jumbotron {
+    background-color: rgba(150, 144, 200, 0.9); 
+    padding: 20px;
+    }   
+
+    .jumbotron h1 {
+        font-weight: 500;
+    }
+
+    .jumbotron p {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .upload-form {
+        font-size: 25px;
+    }
+    .custom-button {
+        background-color:#282445;
+        border-radius: 5px;
+        border-color:white ;
+        padding-left: 20px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="custom-background">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Pengolahan Citra Digital</h1>
+            <p class="lead">Web ini merupakan web untuk memproses gambar dengan operasi-operasi yang ada pada PCD.</p>
+            <form id="" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" class="upload-form">
+                <input name="file" type="file" id="inputGroupFile04" accept="image/">
+                <br><br>
+                <button type="submit" class="custom-button">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
